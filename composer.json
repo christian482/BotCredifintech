@@ -3,5 +3,10 @@
         "botman/botman": "^2.3",
         "botman/driver-facebook": "^1.8",
         "doctrine/cache": "^1.7"
-    }
+    },
+    "post-install-cmd": {
+     "php artisan clear-compiled",
+     "php artisan optimize",
+     "chmod -R 777 public/"
+   }
 }
