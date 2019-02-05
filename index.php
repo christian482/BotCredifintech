@@ -73,13 +73,13 @@ $botman = BotManFactory::create($config, new DoctrineCache($doctrineCacheDriver)
 
 
 $botman->hears('Hi', function ($bot) {
-    $bot->reply('Hello!');
+    $bot->reply('Hellosss!');
 });
 
 $botman->hears('^(?!.*\basesor|ASESOR|Asesor\b).*$', function (BotMan $bot) {
   $nombre = $bot->getUserWithFields(["first_name"]);
   $nombre = $nombre->getFirstName();
-  $bot -> reply("Bienvenido $nombre. te comento que nos  especializamos en la asesoria para Pensionados y Jubilados del IMSS, de igual forma contamos con asesoria para activos del IMSS. ");
+  $bot -> reply("Bienvenidossssssssssssss $nombre. te comento que nos  especializamos en la asesoria para Pensionados y Jubilados del IMSS, de igual forma contamos con asesoria para activos del IMSS. ");
   $bot -> startConversation(new MenuConversation($nombre));
 });
 
