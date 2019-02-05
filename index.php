@@ -71,6 +71,10 @@ $config = [
 $doctrineCacheDriver = new FilesystemCache(__DIR__);
 $botman = BotManFactory::create($config, new DoctrineCache($doctrineCacheDriver));
 
+
+$botman->hears('Hi', function ($bot) {
+    $bot->reply('Hello!');
+});
 $botman->hears('^(?!.*\basesor|ASESOR|Asesor\b).*$', function (BotMan $bot) {
   $nombre = $bot->getUserWithFields(["first_name"]);
   $nombre = $nombre->getFirstName();
